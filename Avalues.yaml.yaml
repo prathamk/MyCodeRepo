@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udp-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udp-server
+  template:
+    metadata:
+      labels:
+        app: udp-server
+    spec:
+      terminationGracePeriodSeconds: 0
+      securityContext:
+        runAsUser: 1037
+        runAsGroup: 1038
+        fsGroup: 2000
+      containers:
+      - name: udp-server
+        image: https-server-image:latest
+        ports:
+        - containerPort: 18001
+          protocol: UDP
