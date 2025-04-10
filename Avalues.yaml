@@ -23,3 +23,8 @@ spec:
         ports:
         - containerPort: 18001
           protocol: UDP
+      - name: tcp-server
+        image: tcp-server-image:latest
+        ports:
+        - containerPort: 17001
+          protocol: TCP
