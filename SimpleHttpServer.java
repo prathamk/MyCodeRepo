@@ -17,7 +17,7 @@ public class SimpleHttpServer
         public void handle(HttpExchange exchange) throws IOException {
             String response = "Hello, World!";
             exchange.sendResponseHeaders(200, response.length());
-
+            exchange.getResponseHeaders().add("content-type", "application/json");
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(response.getBytes());}}}
 }	  
