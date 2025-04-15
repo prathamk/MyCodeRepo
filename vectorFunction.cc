@@ -39,30 +39,5 @@ int main() {
      }
      cout << endl;
 
-    // vec1 and vec2 before merge
-    cout << "Before merge:" << endl;
-    cout << "vect1: ";
-    for(int num : vect1) {
-        cout << num << " ";
-    }
-    cout << endl;
-
-    cout << "vect2: ";
-    for(int num : vect2) {
-        cout << num << " ";
-    }
-    cout << endl;
-
-    // perform merge operation
-    merge(vect1.begin(), vect1.end(), vect2.begin(), vect2.end(), result.begin());
-
-    // output result after merge
-    cout << "After merge:" << endl;
-    cout << "result: ";
-    for(int num : result) {
-        cout << num << " ";
-    }
-    cout << endl;
-
-    return 0;
+     return 0;
 }
