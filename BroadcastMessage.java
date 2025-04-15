@@ -10,13 +10,17 @@ public class BroadcastMessage implements Serializable
 {
     public Row data;
     public boolean clearStateSignal;
+    public int dataSize;
+    public double signalStrength;
 
     public BroadcastMessage() {}
 
-    private BroadcastMessage(Row data, boolean clearStateSignal)
+    private BroadcastMessage(Row data, boolean clearStateSignal, int dataSize, double signalStrength)
     {
         this.data = data;
         this.clearStateSignal = clearStateSignal;
+        this.dataSize = dataSize;
+        this.signalStrength = signalStrength;
     }
 
     public static BroadcastMessage ofData(Row data)
@@ -32,6 +36,15 @@ public class BroadcastMessage implements Serializable
     public Row getData()
     {
         return data;
+    }
+
+    public Row getDataSize()
+    {
+        return dataSize;
+    }
+    public Row getSignalStrength()
+    {
+        return signalStrength;
     }
 
     public boolean isClearStateSignal()
