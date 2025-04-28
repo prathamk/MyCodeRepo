@@ -15,9 +15,9 @@ public class BroadcastMessage implements Serializable
 
     public BroadcastMessage() {}
 
-    private BroadcastMessage(Row data, boolean clearStateSignal, int dataSize, double signalStrength)
+    private BroadcastMessage(Row rowData, boolean clearStateSignal, int dataSize, double signalStrength)
     {
-        this.data = data;
+        this.data = rowData;
         this.clearStateSignal = clearStateSignal;
         this.dataSize = dataSize;
         this.signalStrength = signalStrength;
